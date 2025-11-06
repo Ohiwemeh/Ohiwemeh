@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, ExternalLink, Github, Mail, Phone } from 'lucide-react';
+import { Menu, X, Github, Mail, Phone } from 'lucide-react';
 
 interface LandingHeroProps {
     title?: string;
@@ -108,7 +108,7 @@ const LandingPage: React.FC<LandingHeroProps> = ({ title, subtitle }) => {
                             <h3 className="text-teal-400 text-sm font-[Montserrat] uppercase tracking-widest">Email</h3>
                             <a href="mailto:Ohiwemehjoseph@gmail.com" className='font-medium font-[Poppins] text-teal-50 text-lg hover:text-teal-400 transition-colors flex items-center gap-2'>
                                 <Mail size={16} />
-                                Ohiwemehjoseph@gmail.com
+                                Ohiwemeh@gmail.com
                             </a>
                         </div>
 
