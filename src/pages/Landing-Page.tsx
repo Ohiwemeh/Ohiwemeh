@@ -129,7 +129,7 @@ const LandingPage: React.FC<LandingHeroProps> = ({ title, subtitle }) => {
                     <div className="flex flex-col md:flex-row justify-between items-center gap-4">
                         <p className="text-teal-100/60 text-sm font-[Poppins]">© 2025 Joseph Ohiwemeh Jegede. All rights reserved.</p>
                         <div className="flex gap-6">
-                            <a href="#" className="text-teal-400 hover:text-teal-300 transition-colors">
+                            <a href="https://github.com/Ohiwemeh" className="text-teal-400 hover:text-teal-300 transition-colors">
                                 <Github size={20} />
                             </a>
                             <a href="#" className="text-teal-400 hover:text-teal-300 transition-colors">
