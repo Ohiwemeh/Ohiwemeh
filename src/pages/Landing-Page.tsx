@@ -141,7 +141,7 @@ const LandingPage: React.FC<LandingHeroProps> = ({ title, subtitle }) => {
             </footer>
 
             {/* Custom animations */}
-            <style jsx>{`
+            <style>{`
                 @keyframes fade-in {
                     from {
                         opacity: 0;
