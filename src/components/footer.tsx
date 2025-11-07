@@ -1,7 +1,7 @@
 import React from 'react'
 import { Github, Mail, Phone } from 'lucide-react';
 
-const footer = () => {
+const footer: React.FC = () => {
   return (
      <footer className="relative bg-slate-900/50 backdrop-blur-sm border-t border-teal-400/20 py-12 md:py-16">
                 <div className="max-w-6xl mx-auto px-6 md:px-20">

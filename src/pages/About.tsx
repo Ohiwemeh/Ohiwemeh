@@ -1,12 +1,12 @@
-
+import React from 'react';
 import { Mail, Phone, Github, Linkedin } from 'lucide-react';
 
-const AboutMeSection = () => {
+const AboutMeSection: React.FC = () => {
     return (
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 p-6 md:p-12">
             {/* Decorative flowing lines */}
             <div className="fixed inset-0 overflow-hidden pointer-events-none opacity-20">
-                <svg className="absolute top-20 right-0 w-96 h-96" viewBox="0 0 200 200">
+                {/* <svg className="absolute top-20 right-0 w-96 h-96" viewBox="0 0 200 200">
                     <path d="M 50 100 Q 100 50 150 100" stroke="url(#gradient1)" strokeWidth="0.5" fill="none" />
                     <defs>
                         <linearGradient id="gradient1" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -14,8 +14,8 @@ const AboutMeSection = () => {
                             <stop offset="100%" stopColor="#06b6d4" />
                         </linearGradient>
                     </defs>
-                </svg>
-                <svg className="absolute bottom-40 left-0 w-96 h-96" viewBox="0 0 200 200">
+                </svg> */}
+                {/* <svg className="absolute bottom-40 left-0 w-96 h-96" viewBox="0 0 200 200">
                     <path d="M 50 50 Q 100 100 50 150" stroke="url(#gradient2)" strokeWidth="0.5" fill="none" />
                     <defs>
                         <linearGradient id="gradient2" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -23,19 +23,19 @@ const AboutMeSection = () => {
                             <stop offset="100%" stopColor="#06b6d4" />
                         </linearGradient>
                     </defs>
-                </svg>
+                </svg> */}
             </div>
 
             <div className="max-w-7xl mx-auto relative">
                 {/* About Me Header Card */}
-                <div className="relative mb-12">
-                    <div className="absolute -left-4 top-0 w-64 h-20 bg-gradient-to-r from-purple-600 to-purple-500 rounded-r-full flex items-center pl-8">
+                <div className="relative mb-">
+                    <div className="absolute -left-70 -top-10 w-64 h-20 bg-gradient-to-r from-purple-600 to-purple-500 rounded-r-full flex items-center pl-8">
                         <h2 className="text-white text-3xl md:text-4xl font-bold font-[Montserrat]">About me</h2>
                     </div>
                 </div>
 
                 {/* Main Content Grid */}
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mt-24">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mt-10">
                     {/* Left Column - Bio and Contact */}
                     <div className="space-y-8">
                         {/* Bio Section */}
@@ -62,7 +62,7 @@ const AboutMeSection = () => {
                                     <div className="w-8 h-8 rounded-full bg-teal-400/20 flex items-center justify-center group-hover:bg-teal-400/30">
                                         <Mail size={16} className="text-teal-400" />
                                     </div>
-                                    <span className="font-[Poppins]">Ohiwemehjoseph@gmail.com</span>
+                                    <span className="font-[Poppins]">Ohiwemeh@gmail.com</span>
                                 </a>
                                 <a href="tel:+2349137818358" className="flex items-center gap-3 text-teal-100/80 hover:text-teal-400 transition-colors group">
                                     <div className="w-8 h-8 rounded-full bg-teal-400/20 flex items-center justify-center group-hover:bg-teal-400/30">
