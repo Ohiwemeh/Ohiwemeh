@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
+import heroImage from '../assets/landing-page.png';
 
 interface LandingHeroProps {
     title?: string;
@@ -49,9 +50,14 @@ const LandingPage: React.FC<LandingHeroProps> = ({ title, subtitle }) => {
             </header>
 
             {/* Main Hero Section */}
-            <section className="relative min-h-screen flex flex-col items-center justify-center px-6 md:px-20 pt-20">
+            <section
+                className="relative min-h-screen flex flex-col items-center justify-center px-6 md:px-20 pt-20 bg-cover bg-center md:bg-[position:50%_40%] bg-no-repeat bg-fixed"
+                style={{ backgroundImage: `url(${heroImage})` }}
+            >
+                {/* Overlay for contrast */}
+                <div className="absolute inset-0 bg-slate-900/70"></div>
                 {/* Animated title with stagger effect */}
-                <div className="text-center space-y-6 max-w-5xl animate-fade-in">
+                <div className="relative z-10 text-center space-y-6 max-w-5xl animate-fade-in">
                     <div className="inline-block">
                         <span className="text-teal-400/60 text-sm md:text-base font-[Montserrat] tracking-widest uppercase">Welcome to my digital space</span>
                         <div className="h-1 w-24 bg-gradient-to-r from-teal-400 to-cyan-400 rounded-full mt-3 mx-auto"></div>
