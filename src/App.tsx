@@ -1,18 +1,23 @@
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import LandingPage from './pages/Landing-Page';
 import IntroSection from './pages/About';
 import HelloSection from './pages/HelloSection';
 import PortfolioWelcome from './pages/Landing-Page';
 import ProjectsSection from './pages/ProjectsSection';
 import ProjectDetail from './pages/ProjectDetail';
 
+interface Trail {
+  x: number;
+  y: number;
+  id: number;
+}
+
 const MouseFollower = () => {
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
-  const [trails, setTrails] = useState([]);
+  const [trails, setTrails] = useState<Trail[]>([]);
 
   useEffect(() => {
-    const handleMouseMove = (e) => {
+    const handleMouseMove = (e: MouseEvent) => {
       setMousePos({ x: e.clientX, y: e.clientY });
       
       // Add trail effect

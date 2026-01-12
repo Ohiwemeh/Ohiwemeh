@@ -1,14 +1,23 @@
 import React, { useState, useEffect, useRef } from 'react';
 
+interface Particle {
+  x: number;
+  y: number;
+  id: number;
+  vx: number;
+  vy: number;
+  life: number;
+}
+
 const IntroSection: React.FC = () => {
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
   const [isHovering, setIsHovering] = useState(false);
-  const [particles, setParticles] = useState([]);
+  const [particles, setParticles] = useState<Particle[]>([]);
   const [scrollProgress, setScrollProgress] = useState(0);
-  const sectionRef = useRef(null);
+  const sectionRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    const handleMouseMove = (e) => {
+    const handleMouseMove = (e: MouseEvent) => {
       setMousePos({ x: e.clientX, y: e.clientY });
       
       const target = e.target as HTMLElement;

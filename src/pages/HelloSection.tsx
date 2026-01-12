@@ -1,9 +1,18 @@
 import React, { useState, useEffect } from 'react';
 
+interface Particle {
+  x: number;
+  y: number;
+  id: number;
+  vx: number;
+  vy: number;
+  life: number;
+}
+
 const HelloSection: React.FC = () => {
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
   const [isHovering, setIsHovering] = useState(false);
-  const [particles, setParticles] = useState([]);
+  const [particles, setParticles] = useState<Particle[]>([]);
   const [textVisible, setTextVisible] = useState(false);
   const [imageLoaded, setImageLoaded] = useState(false);
 
@@ -14,7 +23,7 @@ const HelloSection: React.FC = () => {
   }, []);
 
   useEffect(() => {
-    const handleMouseMove = (e) => {
+    const handleMouseMove = (e: MouseEvent) => {
       setMousePos({ x: e.clientX, y: e.clientY });
       
       const target = e.target as HTMLElement;

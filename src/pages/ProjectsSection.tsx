@@ -15,7 +15,6 @@ const ProjectsSection: React.FC = () => {
   const [isHovering, setIsHovering] = useState(false);
   const [particles, setParticles] = useState<Particle[]>([]);
   const [activeProject, setActiveProject] = useState(0);
-  const [scrollProgress, setScrollProgress] = useState(0);
   const sectionRef = useRef<HTMLDivElement>(null);
 
   const projects = [
@@ -66,7 +65,7 @@ const ProjectsSection: React.FC = () => {
   ];
 
   useEffect(() => {
-    const handleMouseMove = (e) => {
+    const handleMouseMove = (e: MouseEvent) => {
       setMousePos({ x: e.clientX, y: e.clientY });
       
       const target = e.target as HTMLElement;
@@ -92,11 +91,7 @@ const ProjectsSection: React.FC = () => {
     };
 
     const handleScroll = () => {
-      if (sectionRef.current) {
-        const rect = sectionRef.current.getBoundingClientRect();
-        const progress = Math.max(0, Math.min(1, 1 - (rect.top / window.innerHeight)));
-        setScrollProgress(progress);
-      }
+      // Scroll handler for future use
     };
 
     window.addEventListener('mousemove', handleMouseMove);
