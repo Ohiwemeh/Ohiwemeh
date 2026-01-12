@@ -1,13 +1,22 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 
+interface Particle {
+  x: number;
+  y: number;
+  id: number;
+  vx: number;
+  vy: number;
+  life: number;
+}
+
 const ProjectsSection: React.FC = () => {
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
   const [isHovering, setIsHovering] = useState(false);
-  const [particles, setParticles] = useState([]);
+  const [particles, setParticles] = useState<Particle[]>([]);
   const [activeProject, setActiveProject] = useState(0);
   const [scrollProgress, setScrollProgress] = useState(0);
-  const sectionRef = useRef(null);
+  const sectionRef = useRef<HTMLDivElement>(null);
 
   const projects = [
     {
